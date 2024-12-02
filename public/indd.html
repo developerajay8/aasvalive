@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic Table with JavaScript</h2>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic rows will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        const data = [
+            { name: "Ajay Sharma", age: 28, city: "New Delhi" },
+            { name: "Ravi Kumar", age: 32, city: "Mumbai" },
+            { name: "Priya Verma", age: 26, city: "Bangalore" }
+        ];
+
+        function generateTable() {
+            const tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+
+            data.forEach((row) => {
+                const tr = document.createElement('tr');
+                
+                const tdName = document.createElement('td');
+                tdName.textContent = row.name;
+                tr.appendChild(tdName);
+                
+                const tdAge = document.createElement('td');
+                tdAge.textContent = row.age;
+                tr.appendChild(tdAge);
+                
+                const tdCity = document.createElement('td');
+                tdCity.textContent = row.city;
+                tr.appendChild(tdCity);
+                
+                tableBody.appendChild(tr);
+            });
+        }
+
+        generateTable();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Importing the font */
+@font-face {
+  font-family: 'HandelGo';
+  src: url('/fonts/HandelGo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+/* body {
+  background: #1E1E1E;
+} */
+
+.background-img {
+  background-image: url('/Banner 1.jpg'); /* Corrected path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.cta-btn {
+  font-size: 1.2rem;
+  background-color: #1b1b1b;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.cta-btns {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  padding: 12px 25px;
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btns:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
+
+.shadowbutton{
+  box-shadow: 0px 7px 0px rgb(119, 249, 206);
+}
+
+/* first video */
+.background-img2 {
+  background-image: url('/homebanner.png'); /* Corrected path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  
+}
+
+
+
