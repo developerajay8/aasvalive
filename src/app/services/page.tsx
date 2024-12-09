@@ -12,77 +12,71 @@ import React from "react";
 import Image from "next/image";
 import group89 from "../../../public/services.png";
 import {
-  FaCode,
   FaMobileAlt,
-  FaCloud,
   FaRobot,
   FaCogs,
   FaPaintBrush,
-  FaShareAlt,
-  FaEdit,
+  FaCameraRetro,FaEye
 } from "react-icons/fa";
 
 import { FaRocket, FaBolt, FaLock, FaSync, FaChartLine } from "react-icons/fa";
 import Footer from "../Footer/page";
 import Navbar from "../Navbar/page";
+import Link from "next/link";
 
 export default function Page() {
   const services = [
     {
-      title: "Web Development",
+      title: "Computer Vision",
       description:
-        "Build robust, responsive, and visually stunning websites tailored to your needs.",
-      icon: <FaCode className="text-blue-600 text-4xl" />,
+        "Computer Vision allows computers to analyze and interpret visual information from the world.",
+      icon: <FaCameraRetro className="text-green-600 text-4xl" />,
+      href: "/computervision", // New attribute for route
     },
     {
       title: "Mobile App Development",
       description:
         "Custom mobile solutions for iOS and Android to keep you ahead in the game.",
       icon: <FaMobileAlt className="text-green-600 text-4xl" />,
-    },
-    {
-      title: "Cloud Computing",
-      description:
-        "Scalable cloud solutions to boost your business performance and flexibility.",
-      icon: <FaCloud className="text-purple-600 text-4xl" />,
+      href: "/appdevelopment", // New attribute for route
     },
     {
       title: "AI & Machine Learning",
       description:
         "Leverage the power of AI to automate processes and gain actionable insights.",
       icon: <FaRobot className="text-red-600 text-4xl" />,
+      href: "/aimachine", // New attribute for route
+    },
+    {
+      title: "Augmented Reality",
+      description:
+        "Harness the potential of AR to create immersive experiences and enhance real-world interactions.",
+      icon: <FaEye className="text-blue-600 text-4xl" />,  // You can use a different icon like FaEye or another relevant one
+      href: "/ar", // New attribute for the AR route
     },
     {
       title: "CGI & 2D/3D Modeling",
       description:
         "High-quality computer-generated imagery (CGI) and 2D/3D modeling for visual storytelling.",
       icon: <FaCogs className="text-blue-600 text-4xl" />, // Icon for CGI & 2D/3D
+      href: "/cgi2d3d", // New attribute for route
     },
     {
       title: "Branding & Designing",
       description:
         "Creating impactful brand identities through strategic design and innovative visuals.",
       icon: <FaPaintBrush className="text-red-600 text-4xl" />, // Icon for Branding & Designing
-    },
-    {
-      title: "Editing & Post Production",
-      description:
-        "Professional editing and post-production services to enhance your media content.",
-      icon: <FaEdit className="text-purple-600 text-4xl" />, // Icon for Editing & Post Production
-    },
-    {
-      title: "Social Media Marketing",
-      description:
-        "Maximize your online presence with targeted social media campaigns and strategies.",
-      icon: <FaShareAlt className="text-yellow-600 text-4xl" />, // Icon for Social Media
+      href: "/brandinganddesigning", // New attribute for route
     },
     {
       title: "ERP Solutions",
       description:
         "Streamline your business processes with custom ERP solutions for better efficiency.",
       icon: <FaChartLine className="text-teal-600 text-4xl" />, // Icon for ERP Solutions
-    },
+      href: "/erpsolution", // New attribute for route
+    }
   ];
+
 
   const features = [
     {
@@ -117,32 +111,7 @@ export default function Page() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "John Doe",
-      position: "CEO, TechCorp",
-      feedback:
-        "The team delivered exceptional service and exceeded our expectations. Highly recommended!",
-      image: "/services.png", // Replace with your actual image path
-      companyLogo: "/images/techcorp-logo.png", // Replace with actual logo
-    },
-    {
-      name: "Jane Smith",
-      position: "CTO, Innovatech",
-      feedback:
-        "Their solutions transformed our business processes and drove significant growth.",
-      image: "/services.png",
-      companyLogo: "/images/innovatech-logo.png",
-    },
-    {
-      name: "Mark Wilson",
-      position: "Founder, Startify",
-      feedback:
-        "Amazing experience working with the team. Their expertise is unmatched!",
-      image: "/services.png",
-      companyLogo: "/images/startify-logo.png",
-    },
-  ];
+
 
   const faqs: FAQ[] = [
     {
@@ -174,28 +143,6 @@ export default function Page() {
       <div className="bg-[#1e1e1e] w-full">
         <Navbar />
       </div>
-      {/* <div className="relative">
-        <Image
-          src={group89}
-          alt="Logo"
-          className="w-full h-[667px] object-cover"
-        />
-        <div className="absolute inset-0 py-[15%] mx-auto text-center bg-black bg-opacity-50">
-          <h1 className="text-white text-[56px] mb-6 font-handel">
-            Our Services
-          </h1>
-          <div className="flex justify-center items-center">
-            <div className="text-center flex ">
-              <div className="px-6 py-3 text-[18px] hover:underline uppercase text-white font-semibold rounded-md cursor-pointer ">
-                <a href="">Home</a>
-              </div>
-              <div className="px-6 py-3 text-[18px] uppercase font-semibold text-white rounded-md cursor-pointer ">
-                Our Services
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div className="relative">
         {/* Background Image */}
@@ -216,7 +163,7 @@ export default function Page() {
           <div className="flex justify-center items-center space-x-4">
             {/* Home Link */}
             <div className="px-4 py-2 text-sm sm:text-base lg:text-lg hover:underline uppercase text-white font-semibold rounded-md cursor-pointer">
-              <a href="#">Home</a>
+              <Link href="/">Home</Link>
             </div>
 
             {/* About Us Link */}
@@ -239,10 +186,7 @@ export default function Page() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300"
-                >
+                <Link href={service.href} key={index} className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex justify-center mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">
                     {service.title}
@@ -250,7 +194,8 @@ export default function Page() {
                   <p className="text-gray-600 text-center">
                     {service.description}
                   </p>
-                </div>
+
+                </Link>
               ))}
             </div>
           </div>
@@ -285,48 +230,7 @@ export default function Page() {
         </section>
       </div>
 
-      <div className="">
-        <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
-          <div className="container mx-auto px-6 text-center max-w-[1204px] ">
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
-              What Our Clients Say
-            </h2>
-            <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-              Here’s what our clients have to say about our exceptional
-              services.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="w-24 h-24 mx-auto">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={96}
-                      height={96}
-                      className="rounded-full object-cover"
-                    />
-                  </div>
-                  <p className="mt-4 text-gray-600 italic">
-                    {testimonial.feedback}
-                  </p>
-                  <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      {testimonial.position}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
+
 
       <div className="">
         <section className="py-16 bg-gray-50">
@@ -338,9 +242,8 @@ export default function Page() {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`border rounded-lg transition-all duration-300 ${
-                    expanded === index ? "bg-white shadow-md" : "bg-gray-100"
-                  }`}
+                  className={`border rounded-lg transition-all duration-300 ${expanded === index ? "bg-white shadow-md" : "bg-gray-100"
+                    }`}
                 >
                   <button
                     onClick={() =>
@@ -395,27 +298,27 @@ export default function Page() {
         </div>
       </section> */}
 
-<div className="">
-  <section className="bg-black text-white w-full mx-auto py-16">
-    <div className="max-w-[1204px] mx-auto px-6 text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-        Ready to elevate your business?
-      </h2>
-      <p className="text-lg sm:text-xl mb-8 text-gray-400">
-        Take the first step toward transformation. Contact us today or explore more about our offerings!
-      </p>
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <a
-          href="/contact"
-          className="px-8 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition duration-300"
-        >
-          Contact Us
-        </a>
-        
+      <div className="">
+        <section className="bg-black text-white w-full mx-auto py-16">
+          <div className="max-w-[1204px] mx-auto px-6 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Ready to elevate your business?
+            </h2>
+            <p className="text-lg sm:text-xl mb-8 text-gray-400">
+              Take the first step toward transformation. Contact us today or explore more about our offerings!
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="/contact"
+                className="px-8 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition duration-300"
+              >
+                Contact Us
+              </a>
+
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-  </section>
-</div>
 
       <Footer />
     </div>

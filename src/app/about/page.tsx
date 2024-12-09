@@ -8,29 +8,6 @@ import Footer from "../Footer/page";
 import Navbar from "../Navbar/page";
 
 export default function page() {
-  const testimonials = [
-    {
-      name: "Customer 1",
-      role: "Position",
-      imageSrc: "/people-holding-wechat-icon.jpg",
-      feedback: "This product is amazing! It has made my work so much easier.",
-    },
-    {
-      name: "Customer 2",
-      role: "Position",
-      imageSrc: "/idea.jpg",
-      feedback:
-        "The quality of service is excellent. I would recommend it to everyone.",
-    },
-    {
-      name: "Customer 3",
-      role: "Position",
-      imageSrc: "/Couple.jpg",
-      feedback:
-        "I am very impressed with this company. Their services are top-notch.",
-    },
-    // Add more testimonials as needed
-  ];
 
   const values = [
     {
@@ -111,11 +88,6 @@ export default function page() {
             At <b>Aasva</b>, we are passionate about harnessing technology to create smarter, more innovative solutions for a rapidly evolving world. As a tech-savvy company, we specialize in delivering cutting-edge services that empower businesses and individuals to thrive in a digital era.
             </p>
 
-            <div className="pt-6">
-              <button className="bg-black hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 rounded">
-                Click here
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -220,41 +192,7 @@ export default function page() {
         </div>
       </section>
 
-      <div className=" py-[50px] bg-white">
-        <div className="bg-gray-100 ">
-          <div className="max-w-7xl mx-auto pb-[40px] px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl py-[30px] font-poppins font-extrabold text-gray-900 text-center">
-              What Our Customers Say
-            </h2>
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                  <div className="flex items-center">
-                    <div className="h-12 w-12 relative">
-                      <Image
-                        className="rounded-full"
-                        src={testimonial.imageSrc}
-                        alt={testimonial.name}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <p className="text-lg font-medium text-gray-900">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-sm text-gray-500">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-gray-600">{testimonial.feedback}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,11 +217,7 @@ export default function page() {
                   <p className="mt-2 text-gray-600 text-justify">
                   From brainstorming in a humble workspace to overcoming countless challenges, every step brought us closer to building something truly remarkable. Our commitment to pushing boundaries and delivering exceptional solutions laid the foundation for the company you see today.
                   </p>
-                  <div className="pt-6">
-                    <button className="bg-black hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 rounded">
-                      Click here
-                    </button>
-                  </div>
+                  
                 </div>
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
@@ -302,11 +236,7 @@ export default function page() {
                   <p className="mt-2 text-gray-600 text-justify">
                   Our journey started with a simple vision: to transform technology into a force for good. From a small team working on big dreams, we steadily grew, fueled by innovation and a commitment to excellence.
                   </p>
-                  <div className="pt-6">
-                    <button className="bg-black hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 rounded">
-                      Click here
-                    </button>
-                  </div>
+                  
                 </div>
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
@@ -328,11 +258,7 @@ export default function page() {
                   <p className="mt-2 text-gray-600 text-justify">
 Our focus remains on creating meaningful impact, driving progress, and staying at the forefront of technological advancements. While we celebrate how far we’ve come, our eyes are firmly set on the future, ready to embrace new challenges and opportunities.
                   </p>
-                  <div className="pt-6">
-                    <button className="bg-black hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 rounded">
-                      Click here
-                    </button>
-                  </div>
+                 
                 </div>
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img

@@ -3,6 +3,7 @@
 
 
 'use client';
+import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
@@ -24,9 +25,9 @@ export default function page() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm sm:text-base">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
+                <Link href="/" className="text-gray-400 hover:text-white transition">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/about" className="text-gray-400 hover:text-white transition">
