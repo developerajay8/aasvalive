@@ -9,8 +9,7 @@ interface FAQ {
 }
 
 import React from "react";
-import Image from "next/image";
-// import Group89 from "../../../public/services.png";
+
 import {
   FaMobileAlt,
   FaRobot,
@@ -272,31 +271,7 @@ export default function Page() {
         </section>
       </div>
 
-      {/* <section className="bg-black text-white py-16">
-        <div className="max-w-[1204px] mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ready to elevate your business?
-          </h2>
-          <p className="text-lg sm:text-xl mb-8 text-gray-400">
-            Take the first step toward transformation. Contact us today or
-            schedule a free consultation!
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="/contact"
-              className="px-8 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition duration-300"
-            >
-              Contact Us
-            </a>
-            <a
-              href="/consultation"
-              className="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition duration-300"
-            >
-              Free Consultation
-            </a>
-          </div>
-        </div>
-      </section> */}
+     
 
       <div className="">
         <section className="bg-black text-white w-full mx-auto py-16">
