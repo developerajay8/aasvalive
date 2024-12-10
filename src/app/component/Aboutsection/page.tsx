@@ -5,6 +5,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Speed from "../../../../public/Speed.png";
 import Innovation from "../../../../public/Innovation.png";
 import Security from "../../../../public/Security.png";
+import Innovat from "../../../../public/innovation.jpg";
+import One from "../../../../public/Customer Focus.png";
+
 import Footer from "../../Footer/page";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 interface FAQ {
@@ -340,9 +343,9 @@ export default function Page() {
                 className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 data-aos="fade"
               >
-                <img
-                  src="/innovation.jpg"
-                  alt="Innovation"
+                <Image
+                  src={Innovat}
+                  alt="Innovat"
                   className="w-full h-[300px] object-cover"
                 />
                 <div className="p-6">
@@ -361,9 +364,9 @@ export default function Page() {
                 className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 data-aos="fade"
               >
-                <img
-                  src="customer focus.jpg"
-                  alt="Customer Focus"
+                <Image
+                  src={One}
+                  alt=""
                   className="w-full h-[300px] object-cover"
                 />
                 <div className="p-6">
