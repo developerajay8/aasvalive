@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import group80 from "../../../public/silhouette-business-people-discussion-meeting-cityscape-team-concept.png";
 import group81 from "../../../public/close-up-young-colleagues-having-meeting.png";
-import Where from "../../../public/Where We Are Today.png";
+import Where from "../../../public/Where We Are Today 1.png";
 import { FaHeart, FaLightbulb, FaUsers } from "react-icons/fa";
 import Footer from "../Footer/page";
 import Navbar from "../Navbar/page";
@@ -222,7 +222,7 @@ export default function page() {
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
                     className="rounded-lg shadow-lg w-full h-[400px]"
-                    src="/The Beginning.png"
+                    src="TheBeginning 1.png"
                     alt="Our Beginning"
                   />
                 </div>
@@ -241,7 +241,7 @@ export default function page() {
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
                     className="rounded-lg shadow-lg w-full h-[400px]"
-                    src="/Growth and Expansion.png"
+                    src="GrowthandExpansion 1.png"
                     alt="Our Growth"
                   />
                 </div>

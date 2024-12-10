@@ -10,7 +10,7 @@ interface FAQ {
 
 import React from "react";
 import Image from "next/image";
-import group89 from "../../../public/services.png";
+// import Group89 from "../../../public/services.png";
 import {
   FaMobileAlt,
   FaRobot,
@@ -146,9 +146,9 @@ export default function Page() {
 
       <div className="relative">
         {/* Background Image */}
-        <Image
-          src={group89}
-          alt="Logo"
+        <img
+          src="services.png"
+          alt=""
           className="w-full h-[50vh] sm:h-[60vh] lg:h-[100vh] object-cover"
         />
 
