@@ -1,8 +1,8 @@
-
 import React from "react";
 import Image from "next/image";
-import group80 from "../../../public/silhouette-business-people-discussion-meeting-cityscape-team-concept.jpg";
-import group81 from "../../../public/close-up-young-colleagues-having-meeting.jpg";
+import group80 from "../../../public/silhouette-business-people-discussion-meeting-cityscape-team-concept.png";
+import group81 from "../../../public/close-up-young-colleagues-having-meeting.png";
+import Where from "../../../public/Where We Are Today.png";
 import { FaHeart, FaLightbulb, FaUsers } from "react-icons/fa";
 import Footer from "../Footer/page";
 import Navbar from "../Navbar/page";
@@ -222,7 +222,7 @@ export default function page() {
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
                     className="rounded-lg shadow-lg w-full h-[400px]"
-                    src="/The Beginning.jpg"
+                    src="/The Beginning.png"
                     alt="Our Beginning"
                   />
                 </div>
@@ -241,7 +241,7 @@ export default function page() {
                 <div className="mt-6 md:mt-0 md:w-1/2">
                   <img
                     className="rounded-lg shadow-lg w-full h-[400px]"
-                    src="/Growth and Expansion.jpg"
+                    src="/Growth and Expansion.png"
                     alt="Our Growth"
                   />
                 </div>
@@ -261,9 +261,9 @@ Our focus remains on creating meaningful impact, driving progress, and staying a
                  
                 </div>
                 <div className="mt-6 md:mt-0 md:w-1/2">
-                  <img
+                  <Image
                     className="rounded-lg shadow-lg w-full h-[400px]"
-                    src="/Where We Are Today.jpg"
+                    src={Where}
                     alt="Our Team Today"
                   />
                 </div>
