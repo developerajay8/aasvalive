@@ -6,7 +6,7 @@ import Navbar from "../Navbar/page";
 import Link from "next/link";
 import { FaSearch, FaCamera, FaRobot, FaRegQuestionCircle, } from 'react-icons/fa';
 import Brandimage from '../../../public/Brand Strategy for Small Businesses.png';
-
+ 
 const industries = [
     {
         title: "Retail",
